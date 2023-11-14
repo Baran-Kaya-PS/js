@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualisation des Médailles Olympiques</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<h1>Visualisation des Médailles Olympiques</h1>
+
+<!-- Section de Sélection de Pays (Optionnel) -->
+<div id="countrySelector">
+    <label for="countrySelect">Choisissez un pays :</label>
+    <select id="countrySelect">
+        <!-- Les options seront ajoutées dynamiquement en JavaScript -->
+    </select>
+</div>
+
+<!-- Section des Graphiques -->
+<div id="charts">
+    <h2>Graphique en Tarte (Pie Chart)</h2>
+    <canvas id="medalsPieChart"></canvas>
+
+    <h2>Graphique en Anneau (Doughnut Chart)</h2>
+    <canvas id="medalsDoughnutChart"></canvas>
+</div>
+
+<script src='index.js'></script>
+</body>
+</html>

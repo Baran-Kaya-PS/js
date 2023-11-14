@@ -1,0 +1,31 @@
+<!-- Ecrire un script qui va générer un nombre aléatoire entre 1 et 1024, et demander à l'utilisateur de retrouver ce nombre. A chaque essai, le script indiquera si le nombre à trouver est plus grand ou plus petit. Lorsque le nombre est trouvé, le script affichera le nombre de coups qui ont été nécessaires à l'utilisateur.
+
+Vous devez utiliser un formulaire comprenant un champ de type text et un bouton de validation du formulaire, ainsi qu'un paragraphe (élément HTML p) afin de donner les indications à l'utilisateur.
+
+Notes :
+
+Regarder la documentation de la méthode random de l'objet Math ;
+Utiliser la fonction is_numeric ci-dessous pour savoir si une chaine de caractères n'est composée que de chiffres ;
+Utiliser l'évènement onSubmit du formulaire pour déclencher le traitement JS.
+function is_numeric(chaine) {
+var exp=new RegExp("^[0-9]*$","g");
+return exp.test(chaine);
+} -->
+
+<!-- Path: ex9.html -->
+<!-- Compare this snippet from ex9.html: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form id="form">
+  <input type="text" id="text" name="text">
+  <span id="error" class="text-danger"></span> <!-- Ajout d'un élément span pour le message d'erreur -->
+  <button id="submit" class="btn btn-primary">Soumettre</button>
+</form>
+<script src="ex9.js"></script>
+</body>
+</html>

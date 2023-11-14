@@ -1,0 +1,129 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TestJQuery-Question#2</title>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Afficher le nombre de fruits dans le span
+    var nombreDeFruits = $("#fruits li").length;
+    $("#nb_fruits").text("(" + nombreDeFruits + ")");
+
+    // Ajout du champ de saisie après la liste de fruits
+    $("#fruits").after('<form><input type="text" id="saisie" maxlength="50" placeholder="Saisissez le nom du fruit..."></form>');
+
+    // Ajout d'un écouteur sur le champ de saisie pour la touche "Entrée"
+    $("#saisie").keypress(function(e) {
+      if(e.which == 13) {
+        e.preventDefault(); // Empêche la validation du formulaire
+
+        var fruitSaisi = $(this).val().trim(); // Supprime les espaces superflus
+
+        var fruitExiste = false;
+        $("#fruits li").each(function() { // Parcourir chaque élément <li> de la liste
+          if ($(this).text().trim().toLowerCase() === fruitSaisi.toLowerCase()) {
+            fruitExiste = true;
+          }
+        });
+
+        if (fruitExiste) {
+          alert('Ce fruit existe déjà dans la liste.');
+        } else {
+          // Ajoute le fruit à la liste
+          $("#fruits").append('<li style="color: green;">' + fruitSaisi + '</li>');
+
+          // Met à jour le compteur de fruits
+          nombreDeFruits++;
+          $("#nb_fruits").text("(" + nombreDeFruits + ")");
+
+          // Trie les fruits alphabétiquement
+          var fruitList = $("#fruits li").get();
+          fruitList.sort(function(a,b){
+            return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+          });
+          $("#fruits").empty(); // Videz la liste avant d'ajouter les éléments triés
+          $.each(fruitList, function(index, li){
+            $("#fruits").append(li);
+          });
+        }
+
+        $(this).val(''); // Réinitialise le champ de saisie
+      }
+    });
+  });
+</script>
+<h1>Fruits <span id="nb_fruits"></span></h1>
+<ul id="fruits">
+  <li>acérola</li>
+  <li>amande tropicale</li>
+  <li>anone des marais</li>
+  <li>avocat</li>
+  <li>banane 'Petite Naine'</li>
+  <li>barbadine</li>
+  <li>cacao</li>
+  <li>carambole</li>
+  <li>cériman</li>
+  <li>corossol</li>
+  <li>curuba</li>
+  <li>curuba india</li>
+  <li>curuba rouge</li>
+  <li>datte</li>
+  <li>feijoa</li>
+  <li>figue de Barbarie</li>
+  <li>fruit de la passiflore anémone</li>
+  <li>fruit de la passiflore bleue</li>
+  <li>fruit de la passion</li>
+  <li>fruit de l'arbre à pain</li>
+  <li>fruit de sébestier</li>
+  <li>girembelle</li>
+  <li>goyave</li>
+  <li>goyave de Chine</li>
+  <li>grenade</li>
+  <li>grenadelle</li>
+  <li>grenadille 'Black Knight'</li>
+  <li>grenadille jaune</li>
+  <li>grenadille sauvage</li>
+  <li>kiwano</li>
+  <li>kumquat Fukushu</li>
+  <li>kumquat ovale</li>
+  <li>kumquat rond</li>
+  <li>litchi</li>
+  <li>longane</li>
+  <li>mangoustan</li>
+  <li>mangue</li>
+  <li>marang</li>
+  <li>maypop</li>
+  <li>noix de cajou</li>
+  <li>noix de coco</li>
+  <li>orangine</li>
+  <li>pamplemousse</li>
+  <li>papaye</li>
+  <li>papaye des montagnes</li>
+  <li>passiflore poc-poc</li>
+  <li>pepino</li>
+  <li>physalis</li>
+  <li>pitaya</li>
+  <li>pomme cannelle</li>
+  <li>pomme d'eau</li>
+  <li>pomme de cythère</li>
+  <li>pomme liane</li>
+  <li>pomme-surette</li>
+  <li>prune d'Inde</li>
+  <li>prune du Natal</li>
+  <li>raisin bord-de-mer</li>
+  <li>ramboutan</li>
+  <li>sapote blanche</li>
+  <li>tamarin</li>
+  <li>tamarin des Indes</li>
+  <li>tomate en arbre</li>
+</ul>
+
+<select id="selectedFruits"></select>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+</body>
+</html>
+

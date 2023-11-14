@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeux Olympiques - Médailles par Pays</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery, Popper.js, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Chart.js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    canvas {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    select {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="text-center mb-5">Médailles gagnées aux Jeux Olympiques</h1>
+
+  <h2>Exercice 1: nombre de médaille pars pays</h2>
+  <div class="mb-4">
+    <select id="countryDropdown" class="form-control"></select>
+  </div>
+
+  <h2>Exercice 2: Graphique des médailles par année</h2>
+  <canvas id="myChart" class="mb-4"></canvas>
+
+  <h2>Exercice 3: Choix du type de graphique</h2>
+  <div class="mb-4">
+    <select id="chartTypeDropdown" class="form-control mb-3">
+      <option value="medalsByYear">Médailles par année</option>
+      <option value="totalMedalsByCountry">Médailles totales par pays</option>
+      <option value="medalsBySport">Médailles par sport</option>
+    </select>
+    <canvas id="stackedBarChart"></canvas>
+  </div>
+  <h2>Exercice 4: Exercice 4: Top 5 des pays avec médailles d'or, d'argent et de bronze</h2>
+  <canvas id="top5Chart"></canvas>
+  <h2>Exercice 5: Graphique combiné</h2>
+  <h4> Affichez le nombre total de médailles gagnées par les pays sur un graphique à barres et le nombre d'athlètes participants sur une ligne. Cela vous permettra de voir si le nombre d'athlètes a une influence sur le nombre de médailles gagnées.</h4>
+  <h2>Exercice 6 faire un sélecteur de pays pour afficher ses médailles en fonction du sport</h2>
+  <select id="selecteur_Pays" class="form-control mb-3"></select>
+  <canvas id="countrySportChart"></canvas>
+</div>
+<script src="JO.js"></script>
+</body>
+</html>

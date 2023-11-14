@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script><!--- import de jquery --->
+    <meta charset="UTF-8">
+    <title>Exercices Jquery || Chart.js</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div id="Users">
+    <!--- rajoute du contenu pour décorer la page--->
+    <h1>Exercices Jquery || Chart.js</h1>
+</div>
+<script src="chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!--- import de chart.js --->
+<canvas id="myChart"></canvas><!--- création d'un canvas pour afficher le graphique --->
+
+<div id="addUser">
+    <h2>Ajouter un utilisateur</h2>
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Nom" required>
+        <input type="text" id="phone" placeholder="Téléphone +1(xxx) xxx-xxxx" required>
+        <input type="text" id="address" placeholder="Adresse" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="button" id="addUserButton">Ajouter</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+<!--- Exercice jQuery + Charts.js #1 : Création d'un graphique simple
+
+Créez une page HTML avec un élément canvas pour afficher un graphique.
+Utilisez jQuery pour récupérer des données (par exemple, un tableau de nombres) à partir d'un champ de saisie.
+Utilisez ces données pour afficher un graphique à barres simple avec Charts.js.
+Exercice #2 : Mise à jour dynamique du graphique
+
+Ajoutez un bouton "Ajouter des données" à votre page.
+Lorsque l'utilisateur clique sur ce bouton, utilisez jQuery pour récupérer de nouvelles données à partir d'un autre champ de saisie.
+Mettez à jour le graphique avec ces nouvelles données sans recharger la page.
+Exercice #3 : Interactivité avec le graphique
+
+Ajoutez un événement "click" à votre graphique.
+Lorsqu'un utilisateur clique sur une barre du graphique, affichez une alerte avec la valeur de cette barre.
+Exercice #4 : Plusieurs types de graphiques
+
+Permettez à l'utilisateur de choisir entre différents types de graphiques (par exemple, barres, lignes, camembert).
+Utilisez jQuery pour récupérer le choix de l'utilisateur et affichez le graphique correspondant avec Charts.js.
+Exercice #5 : Ajout de données via un formulaire
+
+Créez un formulaire permettant à l'utilisateur d'ajouter des points de données (par exemple, date et valeur).
+Lorsque l'utilisateur soumet le formulaire, utilisez jQuery pour récupérer ces données et ajoutez-les au graphique.
+Exercice #6 : Thèmes de couleur
+
+Permettez à l'utilisateur de choisir parmi différents thèmes de couleur pour le graphique.
+Utilisez jQuery pour appliquer le thème choisi au graphique.
+Exercice #7 : Animation du graphique
+
+Ajoutez une option permettant à l'utilisateur de choisir s'il souhaite ou non animer le graphique lors de sa création ou de sa mise à jour.
+Utilisez les options d'animation de Charts.js pour animer le graphique en fonction du choix de l'utilisateur.
+Exercice #8 : Exportation du graphique
+
+Ajoutez un bouton "Exporter en PNG".
+Lorsque l'utilisateur clique sur ce bouton, utilisez Charts.js pour exporter le graphique actuel en tant qu'image PNG.
+Exercice #9 : Superposition de graphiques
+
+Permettez à l'utilisateur d'ajouter plusieurs séries de données.
+Affichez ces séries sur le même graphique, en les superposant.
+Exercice #10 : Zoom et panoramique
+
+Intégrez une bibliothèque de zoom et de panoramique, comme chartjs-plugin-zoom.
+Permettez à l'utilisateur de zoomer et de se déplacer dans le graphique pour examiner les données plus en détail.
+Ces exercices devraient vous aider à maîtriser à la fois jQuery et Charts.js, tout en renforçant vos compétences en programmation JavaScript. Bonne chance ! -->
